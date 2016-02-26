@@ -179,23 +179,23 @@ $contactForm1 = array(
 );
 
 $contactForm2 = array(
-    "lv" => "Vārds: ",
-    "ru" => "Имя: "
+    "lv" => "Vārds",
+    "ru" => "Имя"
 );
 
 $contactForm3 = array(
-    "lv" => "Epasts: ",
-    "ru" => "Электронная почта: "
+    "lv" => "Epasts",
+    "ru" => "Электронная почта"
 );
 
 $contactForm4 = array(
-    "lv" => "Tēma: ",
-    "ru" => "Тема: "
+    "lv" => "Tēma",
+    "ru" => "Тема"
 );
 
 $contactForm5 = array(
-    "lv" => "Ziņa: ",
-    "ru" => "Сообщение: "
+    "lv" => "Ziņa",
+    "ru" => "Сообщение"
 );
 
 $contactForm6 = array(

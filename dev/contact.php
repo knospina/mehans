@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Mehans">
     <head>
         <?php include 'head.php'; ?>
         <script>
@@ -64,7 +64,23 @@
                                 <li>siamehans@gmail.com</li>
                             </ul>  
 
-                            <?php include 'email.php'; ?>
+                            <div ng-controller="formCtrl">
+                                <form id="email-form" name="userForm"  class="well form-search" ng-show="show">
+
+                                    <label for="from"><span class="req">* </span><?php echo $contactForm2[$language]; ?>:</label>
+                                    <input type="text" ng-model="name" class="input-medium search-query" placeholder="<?php echo $contactForm2[$language]; ?>" required >
+                                    <label for="email"><span class="req">* </span><?php echo $contactForm3[$language]; ?>:</label>
+                                    <input type="email" ng-model="email" class="input-medium search-query" placeholder="<?php echo $contactForm3[$language]; ?>" required >
+                                    <label for="subject"><?php echo $contactForm4[$language]; ?>:</label>
+                                    <input type="text" ng-model="subject" class="input-medium search-query" placeholder="<?php echo $contactForm4[$language]; ?>" required >
+                                    <label for="message"><span class="req">* </span><?php echo $contactForm5[$language]; ?>:</label>
+                                    <textarea ng-model="message" rows="10" cols="40" name="message" id="message" required placeholder="<?php echo $contactForm5[$language]; ?>" class="input-medium search-query"></textarea>
+                                    <p><span class="req">* </span>- <?php echo $contactForm7[$language]; ?></p>
+                                    <button type="submit" class="btn" ng-click="formsubmit(userForm.$valid)"  ng-disabled="userForm.$invalid"><?php echo $contactForm6[$language]; ?></button>
+
+                                </form>
+                                <div id="response" ng-model="result">{{result}}</div>
+                            </div>
 
                         </div>
                     </div>
