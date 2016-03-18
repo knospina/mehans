@@ -1,0 +1,33 @@
+<div id="articlescontent">
+    <div class="top">
+        <div id="bot">
+            <div class="inner">
+                <div class="wrapper">
+                    <div class="saraksts" ng-controller="SearchController as SearchCtrl">
+
+                        <label for="marka">{{ 'listLabel' | translate }}</label>
+                        <select ng-model="selectedCar" id="marka" name="marka" size="1" width="50px">
+                            <option value="">{{ 'listAllCars' | translate }}</option>
+                            <option ng-repeat="model in models" value="{{model.model}}">{{model.model}}</option>
+                        </select>
+                        <input ng-click="searchCars(selectedCar)" type="submit" name="username" value="{{ 'listSearch' | translate }}" />
+
+                        <h4>{{ 'listDisclaimer' | translate }}</h4>
+                        <p ng-show="itemCount==0 && cars">{{ 'contactUs1' | translate }} {{model}} {{ 'contactUs2' | translate }}</p>
+                        <table>
+                            <tr ng-show="itemCount>0">
+
+                                <th>Marka</th>
+                                <th>Modelis</th>
+                            </tr>
+                            <tr ng-repeat="car in cars">
+                                <td>{{car.marka}}</td>
+                                <td>{{car.modelis}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
