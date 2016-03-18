@@ -1,36 +1,43 @@
-php_value auto_append_file none
-php_flag zlib.output_compression On
-php_value zlib.output_compression_level 5
-
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
-
-<Files *.html>
-AddCharset UTF-8 .html
-</Files>
-
-<Files *.jpg>
-Header add "Expires" "Mon, 28 Jul 2014 23:30:00 GMT"
-Header add "Cache-Control" "max-age=31536000"
-</Files>
-
-<Files *.ico>
-Header add "Expires" "Mon, 28 Jul 2014 23:30:00 GMT"
-Header add "Cache-Control" "max-age=31536000"
-</Files>
-
-<Files *.gif>
-Header add "Expires" "Mon, 28 Jul 2014 23:30:00 GMT"
-Header add "Cache-Control" "max-age=31536000"
-</Files>
-
-<Files *.css>
-Header add "Expires" "Mon, 28 Jul 2012 23:30:00 GMT"
-Header add "Cache-Control" "max-age=31536000"
-</Files>
-
-<Files *.js>
-Header add "Expires" "Mon, 28 Jul 2012 23:30:00 GMT"
-Header add "Cache-Control" "max-age=31536000"
-</Files>
+Options +FollowSymLinks
+RewriteEngine On
+
+
+RewriteCond %{THE_REQUEST} \/index.html\ HTTP [NC]
+RewriteRule (.*)index.html$ /dev/$1 [R=301,L]
+
+ErrorDocument 404 http://mehans.lv/dev/
+
+
+php_value auto_append_file none
+php_flag zlib.output_compression On
+php_value zlib.output_compression_level 5
+
+
+<Files *.html>
+AddCharset UTF-8 .html
+</Files>
+
+<Files *.jpg>
+Header add "Expires" "Mon, 28 Jul 2014 23:30:00 GMT"
+Header add "Cache-Control" "max-age=31536000"
+</Files>
+
+<Files *.ico>
+Header add "Expires" "Mon, 28 Jul 2014 23:30:00 GMT"
+Header add "Cache-Control" "max-age=31536000"
+</Files>
+
+<Files *.gif>
+Header add "Expires" "Mon, 28 Jul 2014 23:30:00 GMT"
+Header add "Cache-Control" "max-age=31536000"
+</Files>
+
+<Files *.css>
+Header add "Expires" "Mon, 28 Jul 2012 23:30:00 GMT"
+Header add "Cache-Control" "max-age=31536000"
+</Files>
+
+<Files *.js>
+Header add "Expires" "Mon, 28 Jul 2012 23:30:00 GMT"
+Header add "Cache-Control" "max-age=31536000"
+</Files>

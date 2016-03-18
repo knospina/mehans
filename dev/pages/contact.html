@@ -1,0 +1,60 @@
+<div id="contactcontent">
+    <div class="top">
+        <div id="bot">
+            <div class="wrapper">
+                <div class="col-1">
+
+                    <iframe width="400" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=%2B57%C2%B0+2'+40.18%22,+%2B24%C2%B0+10'+53.46%22+(57.044494,+24.181518)&amp;daddr=&amp;geocode=FQ5uZgMdDvtwAQ&amp;sll=57.044494,24.181518&amp;sspn=0.006712,0.01929&amp;vpsrc=6&amp;hl=en&amp;mra=mr&amp;ie=UTF8&amp;ll=57.044722,24.177346&amp;spn=0.009338,0.017123&amp;z=15&amp;output=embed"></iframe><br />
+
+                </div>
+                <div class="col-2">
+                    <h4>{{ 'adress1' | translate }}</h4>
+                    <ul>
+                        <li>{{ 'adress2' | translate }}</li>
+                    </ul>
+                    <h4>{{ 'phone' | translate }}</h4>
+                    <ul>
+                        <li>29417373</li>
+                        <li>67348276</li>
+                    </ul>
+                    <h4>{{ 'workTimeLabel' | translate }}</h4>
+                    <ul>
+                        <li>{{ 'workTime1' | translate }}</li>
+                        <li>{{ 'workTime2' | translate }}</li>
+                        <li>{{ 'workTime3' | translate }}</li>
+                        <li>{{ 'workTime4' | translate }}</li>
+                        <li>{{ 'workTime5' | translate }}</li>
+                        <li>{{ 'workTime6' | translate }}</li>
+                    </ul>
+                    <h4>{{ 'email' | translate }}</h4>
+                    <ul>
+                        <li>siamehans@gmail.com</li>
+                    </ul>  
+
+                    <div ng-controller="formCtrl">
+                        <form id="email-form" name="userForm"  class="well form-search" ng-show="show">
+
+                            <label for="from"><span class="req">* </span>{{ 'contactForm2' | translate }}:</label>
+                            <input type="text" ng-model="name" class="input-medium search-query" placeholder="{{ 'contactForm2' | translate }}" required >
+                            <label for="email"><span class="req">* </span>{{ 'contactForm3' | translate }}:</label>
+                            <input type="email" ng-model="email" class="input-medium search-query" placeholder="{{ 'contactForm3' | translate }}" required >
+                            <label for="subject">{{ 'contactForm4' | translate }}:</label>
+                            <input type="text" ng-model="subject" class="input-medium search-query" placeholder="{{ 'contactForm4' | translate }}" required >
+                            <label for="message"><span class="req">* </span>{{ 'contactForm5' | translate }}:</label>
+                            <textarea ng-model="message" rows="10" cols="40" name="message" id="message" required placeholder="{{ 'contactForm5' | translate }}" class="input-medium search-query"></textarea>
+                            <p><span class="req">* </span>- {{ 'contactForm7' | translate }}</p>
+                            <button type="submit" class="btn" ng-click="formsubmit(userForm.$valid)"  ng-disabled="userForm.$invalid">{{ 'contactForm6' | translate }}</button>
+
+                        </form>
+                        <div id="response" ng-model="result">
+                            <div ng-if="result == 1">
+                                {{ 'contactForm9' | translate }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
