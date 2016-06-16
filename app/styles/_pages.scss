@@ -1,0 +1,72 @@
+body {
+    background-color: black;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: $primary;
+}
+
+.header {
+    border-bottom: none;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    /*list-style:none;
+    float:left;
+    
+    line-height:1.2em;
+    padding: 0 42px;*/
+    font-family: 'Marck Script', Sans-Serif;
+    font-size: 35px;
+    color: $primary;
+    /*
+    outline:none;*/
+    
+    &:hover {
+        color: $primary_hover;
+    }
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+}
+
+h2 {
+    font-family: Tahoma, Arial, helvetica, sans-serif;
+    font-size: 1.286em;
+    /*display: block;
+    font-size: 1.5em;*/
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.286em;
+    /*font-size: 1.5em;
+    line-height: 1em;
+    font-weight: normal;
+    margin-bottom: 5px;*/
+}
+
+p {
+    font-size: 0.857em;
+    font-family: Tahoma, Arial, helvetica, sans-serif; 
+    margin: 0;
+}
+
+a {
+    color: $primary;
+}
+

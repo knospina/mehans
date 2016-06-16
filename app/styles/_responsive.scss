@@ -1,0 +1,60 @@
+@media (min-width: 1000px) {
+
+    .container {
+        max-width: 1030px;
+        width: 1030px;
+    }
+
+    .header {
+        background-image: url(../images/header-bg.jpg);
+    } 
+
+    .navbar {
+        height: 337px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .main {
+        /*font-size: 0.75em;*/
+        width: 1000px;
+        margin: 0 auto;
+        background: url(../images/cont-tail.jpg) repeat-y;
+        height: auto;
+        margin-top: -30px;
+    }
+
+
+    .top {
+
+        background:url(../images/cont-top.jpg) no-repeat left top;
+        max-height: 400px;
+
+    }
+
+    .col-sm-6 {
+        padding-top: 50px;
+    }
+
+    .col-sm-6.indent {
+        padding-right: 85px;
+    }
+
+    .footer {
+        padding-top: 0;
+        border: none;
+        color: $primary;
+        .container {
+            height: 57px;
+            background:url(../images/footer-bg.jpg) no-repeat left top;
+            padding: 15px;
+            width: 1000px;
+            
+        }
+
+    } 
+
+}
