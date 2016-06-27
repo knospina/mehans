@@ -44,8 +44,8 @@
                             <li><a ng-href="/cars">{{ 'menuAuto' | translate }}</a></li>
                             <li><a ng-href="/art">{{ 'menuMetalaMaksla' | translate }}</a></li>
                             <li><a ng-href="/contact">{{ 'menuKontakti' | translate }}</a></li>
-                            <li><a href="" ng-click="changeLang('lv')"><img src="images/lv.gif" height="12px" width="21px" alt="lv" /></a></li>
-                            <li><a href="" ng-click="changeLang('ru')"><img src="images/ru.png" height="12px" width="21px" alt="ru" /></a></li>                           
+                            <li class="lang"><a href="" ng-click="changeLang('lv')"><img src="images/lv.gif" height="12px" width="21px" alt="lv" /></a></li>
+                            <li class="lang"><a href="" ng-click="changeLang('ru')"><img src="images/ru.png" height="12px" width="21px" alt="ru" /></a></li>                           
                         </ul>
                     </div>
                 </div>
@@ -98,6 +98,12 @@
         <script src="scripts/controllers/admin.js"></script>
         <script src="scripts/controllers/lang.js"></script>
         <script src="scripts/services/dataservice.js"></script>
+        <script src="scripts/services/authenticateservice.js"></script>
+        <script src="scripts/controllers/adminpanel.js"></script>
+        <script src="scripts/controllers/allcars.js"></script>
+        <script src="scripts/controllers/newcar.js"></script>
+        <script src="scripts/controllers/allpictures.js"></script>
+        <script src="scripts/controllers/newpicture.js"></script>
         <!-- endbuild -->
     </body>
 </html>

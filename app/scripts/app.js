@@ -45,6 +45,31 @@ angular
         controller: 'CarsCtrl',
         controllerAs: 'cars'
     })
+        .when('/adminPanel', {
+          templateUrl: 'views/adminpanel.html',
+          controller: 'AdminpanelCtrl',
+          controllerAs: 'adminPanel'
+        })
+        .when('/allCars', {
+          templateUrl: 'views/allcars.html',
+          controller: 'AllcarsCtrl',
+          controllerAs: 'allCars'
+        })
+        .when('/newCar', {
+          templateUrl: 'views/newcar.html',
+          controller: 'NewcarCtrl',
+          controllerAs: 'newCar'
+        })
+        .when('/allPictures', {
+          templateUrl: 'views/allpictures.html',
+          controller: 'AllpicturesCtrl',
+          controllerAs: 'allPictures'
+        })
+        .when('/newPicture', {
+          templateUrl: 'views/newpicture.html',
+          controller: 'NewpictureCtrl',
+          controllerAs: 'newPicture'
+        })
         .otherwise({
         redirectTo: '/'
     });
@@ -54,7 +79,7 @@ angular
 
 
     /* Translation part TO refactor */
-
+    
     $translateProvider.translations('lv', {
         /* Main menu */
         menuPakalpojumi: 'Pakalpojumi',

@@ -18,20 +18,30 @@
         bottom: 0;
     }
 
+    .navbar-nav > li {
+        padding: 0 28px;
+
+        &.lang,
+        &.lang a {
+            padding: 0 2px;
+        }
+
+    }
+
     .main {
-        /*font-size: 0.75em;*/
         width: 1000px;
         margin: 0 auto;
         background: url(../images/cont-tail.jpg) repeat-y;
         height: auto;
         margin-top: -30px;
+        padding-left: 0;
     }
 
 
     .top {
 
         background:url(../images/cont-top.jpg) no-repeat left top;
-        max-height: 400px;
+        min-height: 400px;
 
     }
 
@@ -52,9 +62,13 @@
             background:url(../images/footer-bg.jpg) no-repeat left top;
             padding: 15px;
             width: 1000px;
-            
+
         }
 
     } 
+
+    .list {
+        padding: 64px 60px 60px 60px;
+    }
 
 }

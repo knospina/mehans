@@ -20,8 +20,28 @@ angular.module('mehansApp')
         return $http.get(urlBase + 'get_all_models');
     };
 
+    this.allImages = function(){
+        return $http.get(urlBase + 'get_all_images');
+    };
+
+    this.allTranslations = function(){
+        return $http.get(urlBase + 'get_translation');
+    };
+
     this.carsByModel = function(model){
         return $http.get(urlBase + 'get_car_by_model/' + model);
+    };
+
+    this.logIn = function(data){
+        return $http.post(urlBase + 'login', data);
+    };
+
+    this.checkToken = function(data){
+        return $http.post(urlBase + 'check-token', data);  
+    };
+
+    this.logOut = function(data){
+        return $http.post(urlBase + 'logout', data);
     };
 
 });

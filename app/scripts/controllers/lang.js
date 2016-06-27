@@ -8,10 +8,13 @@
  * Controller of the mehansApp
  */
 angular.module('mehansApp')
-  .controller('LangCtrl', function ($scope, $translate) {
-    
+    .controller('LangCtrl', function ($scope, $translate) {
+
+
+
+
     $scope.changeLang = function(lang){
         $translate.use(lang);
     };    
-    
-  });
+
+});

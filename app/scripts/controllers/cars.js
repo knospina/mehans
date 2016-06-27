@@ -12,7 +12,6 @@ angular.module('mehansApp')
 
     $scope.models = {};
     $scope.cars = {};
-    $scope.itemCount = 0;
     $scope.model = '';
 
     dataService.allModels()
@@ -23,8 +22,10 @@ angular.module('mehansApp')
     });
 
     $scope.searchCars = function(car){
+        
+        console.log(car);
 
-        if (typeof car === 'undefined') {
+        if (typeof car === 'undefined' || car === '') {
             dataService.allCars()
                 .then(function(response){
                 $scope.cars = response.data;

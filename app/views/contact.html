@@ -1,1 +1,71 @@
-<p>This is the contact view.</p>
+<div class="top contact">
+    <div class="row">
+        <div class="col-sm-6 text-right">
+            <iframe width="400" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=%2B57%C2%B0+2'+40.18%22,+%2B24%C2%B0+10'+53.46%22+(57.044494,+24.181518)&amp;daddr=&amp;geocode=FQ5uZgMdDvtwAQ&amp;sll=57.044494,24.181518&amp;sspn=0.006712,0.01929&amp;vpsrc=6&amp;hl=en&amp;mra=mr&amp;ie=UTF8&amp;ll=57.044722,24.177346&amp;spn=0.009338,0.017123&amp;z=15&amp;output=embed"></iframe><br />
+        </div>
+        <div class="col-sm-6">
+            <h4>{{ 'adress1' | translate }}</h4>
+            <ul>
+                <li>{{ 'adress2' | translate }}</li>
+            </ul>
+            <h4>{{ 'phone' | translate }}</h4>
+            <ul>
+                <li>29417373</li>
+                <li>67348276</li>
+            </ul>
+            <h4>{{ 'workTimeLabel' | translate }}</h4>
+            <ul>
+                <li>{{ 'workTime1' | translate }}</li>
+                <li>{{ 'workTime2' | translate }}</li>
+                <li>{{ 'workTime3' | translate }}</li>
+                <li>{{ 'workTime4' | translate }}</li>
+                <li>{{ 'workTime5' | translate }}</li>
+                <li>{{ 'workTime6' | translate }}</li>
+            </ul>
+            <h4>{{ 'email' | translate }}</h4>
+            <ul>
+                <li>siamehans@gmail.com</li>
+            </ul>  
+
+            <form id="email-form" name="userForm"  class="form-horizontal" ng-show="show">
+                <div class="form-group">
+                    <label for="from" class="col-sm-10 text-left"><span class="req">* </span>{{ 'contactForm2' | translate }}:</label>
+                    <div class="col-sm-10">
+                        <input type="text" ng-model="name" class="input-medium search-query form-control" placeholder="{{ 'contactForm2' | translate }}" required >
+                    </div>                    
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-10 text-left"><span class="req">* </span>{{ 'contactForm3' | translate }}:</label>
+                    <div class="col-sm-10">
+                        <input type="email" ng-model="email" class="input-medium search-query form-control" placeholder="{{ 'contactForm3' | translate }}" required >
+                    </div>                    
+                </div>
+                <div class="form-group">
+                    <label for="subject" class="col-sm-10 text-left">{{ 'contactForm4' | translate }}:</label>
+                    <div class="col-sm-10">
+                        <input type="text" ng-model="subject" class="input-medium search-query form-control" placeholder="{{ 'contactForm4' | translate }}" required >
+                    </div>                    
+                </div>
+                <div class="form-group">
+                    <label for="message" class="col-sm-10 text-left"><span class="req">* </span>{{ 'contactForm5' | translate }}:</label>
+                    <div class="col-sm-10">
+                        <textarea ng-model="message" rows="10" cols="40" name="message" id="message" required placeholder="{{ 'contactForm5' | translate }}" class="input-medium search-query form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p><span class="req">* </span>- {{ 'contactForm7' | translate }}</p>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" ng-click="formsubmit(userForm.$valid)"  ng-disabled="userForm.$invalid">{{ 'contactForm6' | translate }}</button>
+                </div>
+            </form>
+            
+            <div id="response" ng-model="result">
+                <div ng-if="result == 1">
+                    {{ 'contactForm9' | translate }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

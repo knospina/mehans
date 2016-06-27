@@ -1,1 +1,39 @@
-<p>This is the art view.</p>
+<div class="top">
+    <div class="row">
+        <div class="post">
+            <div class="slider" ng-style="sliderHeight">
+
+                <!-- enumerate all photos -->        
+
+
+                <div ng-repeat="image in images" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-style="sliderHide">
+                    <img src="images/uploads/{{image.src}}" />
+                </div>
+
+                <!-- prev / next controls -->
+                <a class="arrow prev" href="#" ng-click="showPrev()" ng-style="sliderHide"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                <a class="arrow next" href="#" ng-click="showNext()" ng-style="sliderHide"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+                <!-- extra navigation controls -->
+                <ul class="nav">
+                    <li  ng-repeat="image in images" ng-class="{'active':isActive($index)}">
+                        <img src="images/uploads/{{image.src}}" alt="images/uploads/{{image.src}}" title="images/uploads/{{image.src}}" ng-click="showPhoto($index)" />
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <p>
+                {{ 'artText1' | translate }}
+            </p>
+            <p>
+                {{ 'artText2' | translate }}<a href="mailto:siamehans@gmail.com">siamehans@gmail.com</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
