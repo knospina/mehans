@@ -28,12 +28,12 @@
 .contact {
     font-family: Tahoma, Arial, Helvetica, sans-serif;
     font-size: 12px;
-    
+
     h4 {
         font-size: 12px;
         font-weight: bold;
     }
-    
+
     ul, li {
         list-style: none;
     }
@@ -42,7 +42,7 @@
 /* Gallery */
 
 .post {
-    
+
     padding-top: 50px;
 
     .slider {
@@ -143,37 +143,65 @@
         }
     }
 
-    .nav {
-        bottom: -4px;
-        display: block;
-        height: 85px;
-        left: 0;
-        margin: 0 auto;
-        padding: 1em 0 0.8em;
+    .slider-wrapper {
         position: absolute;
-        right: 0;
-        text-align: center;
-        width: 100%;
-        z-index: 5;
+        bottom: -4px;
+        overflow: hidden;
 
-        li {
-            background: rgb(18, 42, 10);
-            cursor: pointer;
+        .arrow-prev,
+        .arrow-next {
+            width: 5%;
             display: inline-block;
-            margin: 0 8px;
-            position: relative;
+        }
+        .nav {
 
-            img {
-                height: 60px;
-                width: auto;
-            }
+            display: inline-block;
+            height: 85px;
+            left: 0;
+            margin: 0 auto;
+            padding: 1em 0 0.8em;
+            overflow: hidden;
+            right: 0;
+            text-align: center;
+            width: 90%;
+            z-index: 5;
 
-            &.active img {
-                opacity: 0.5;
+            li {
+                background: rgb(18, 42, 10);
+                cursor: pointer;
+                display: inline-block;
+                margin: 0 8px;
+                position: relative;
+
+                img {
+                    height: 60px;
+                    width: auto;
+                }
+
+                &.active img {
+                    opacity: 0.5;
+                }
             }
+        }
+
+        i { 
+            font-size: 40px;
         }
     }
 
 }
 
 /* End of Gallery */
+
+.photo {
+    margin-top: 20px;
+    .row {
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%;
+    }
+    i {
+        cursor: pointer;
+    }
+}
